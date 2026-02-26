@@ -4,6 +4,8 @@ output/
 .state/
 .DS_Store
 *.log
+.env
+.env.*
 
 # Private/local business data
 profiles/business.profile.json
@@ -15,3 +17,20 @@ assets/*.jpg
 assets/*.jpeg
 assets/*.webp
 assets/*.svg
+
+# Generated invoice/quote artifacts (any folder)
+**/invoice.pdf
+**/quote.pdf
+**/invoice.normalized.json
+**/quote.normalized.json
+**/invoice.validation.json
+**/quote.validation.json
+**/invoice.preview.html
+**/quote.preview.html
+
+# Local working/export dirs
+tmp/
+temp/
+exports/
+artifacts/
+scratch/
