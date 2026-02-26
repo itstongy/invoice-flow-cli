@@ -1,0 +1,47 @@
+{
+  "name": "invoice-flow-cli",
+  "version": "1.0.0",
+  "description": "Agent-friendly CLI to generate beautiful Australian invoices and quotes",
+  "type": "commonjs",
+  "main": "dist/cli.js",
+  "bin": {
+    "invoice-flow": "dist/cli.js",
+    "invoice": "dist/cli.js"
+  },
+  "files": [
+    "dist/",
+    "schemas/",
+    "samples/",
+    "profiles/business.profile.example.json",
+    "profiles/client.presets.example.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "generate": "tsx src/cli.ts generate",
+    "quote": "tsx src/cli.ts quote",
+    "validate": "tsx src/cli.ts validate",
+    "preview": "tsx src/cli.ts preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "invoice",
+    "pdf",
+    "australia",
+    "photography"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "commander": "^14.0.1",
+    "playwright": "^1.56.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

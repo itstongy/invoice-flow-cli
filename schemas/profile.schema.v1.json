@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/profile.schema.v1.json",
+  "title": "BusinessProfile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["legalName", "email", "phone", "address", "payment", "defaultTermsDays"],
+  "properties": {
+    "businessName": { "type": "string" },
+    "legalName": { "type": "string", "minLength": 1 },
+    "abn": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "phone": { "type": "string" },
+    "website": { "type": "string" },
+    "address": { "type": "string", "minLength": 1 },
+    "logoPath": { "type": "string" },
+    "currency": { "type": "string", "default": "AUD", "pattern": "^[A-Z]{3}$" },
+    "defaultTermsDays": { "type": "integer", "minimum": 0 },
+    "payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bankName", "accountName", "bsb", "accountNumber", "payId"],
+      "properties": {
+        "bankName": { "type": "string" },
+        "accountName": { "type": "string" },
+        "bsb": { "type": "string" },
+        "accountNumber": { "type": "string" },
+        "payId": { "type": "string" },
+        "paymentReferenceLabel": { "type": "string" }
+      }
+    },
+    "notesFooter": { "type": "string" },
+    "sequenceStatePath": { "type": "string" }
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invoice Flow"
+  short_description: "Generate modern Australian invoices and quotes as PDFs"
+  default_prompt: "Generate, validate, and export an Australian invoice or quote PDF using Invoice Flow."

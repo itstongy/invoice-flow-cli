@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/invoice.schema.v1.json",
+  "title": "InvoiceInput",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["client", "issueDate", "dueDate", "lineItems"],
+  "properties": {
+    "documentType": {
+      "type": "string",
+      "enum": ["invoice", "quote"],
+      "default": "invoice"
+    },
+    "invoiceNumber": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "dueDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "validUntil": {
+      "type": "string",
+      "format": "date"
+    },
+    "currency": {
+      "type": "string",
+      "default": "AUD",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "gstEnabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string" },
+        "shootDate": { "type": "string", "format": "date" },
+        "location": { "type": "string" }
+      }
+    },
+    "client": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "abn": { "type": "string" }
+      }
+    },
+    "lineItems": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "quantity", "unitPrice"],
+        "properties": {
+          "description": { "type": "string", "minLength": 1 },
+          "quantity": { "type": "number", "exclusiveMinimum": 0 },
+          "unitPrice": { "type": "number", "minimum": 0 },
+          "taxable": { "type": "boolean", "default": true }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "payment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "termsDays": { "type": "integer", "minimum": 0 },
+        "reference": { "type": "string" }
+      }
+    }
+  }
+}

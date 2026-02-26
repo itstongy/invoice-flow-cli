@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "client-presets-v1",
+  "defaultClientId": "example-client",
+  "clients": [
+    {
+      "id": "example-client",
+      "name": "Example Client Pty Ltd",
+      "address": "123 Example Street, Melbourne VIC 3000",
+      "abn": "51824753556",
+      "preferredDocumentType": "invoice",
+      "tags": ["example"]
+    }
+  ]
+}

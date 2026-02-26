@@ -1,0 +1,31 @@
+{
+  "issueDate": "2026-02-25",
+  "dueDate": "2026-03-04",
+  "gstEnabled": false,
+  "session": {
+    "type": "Brand Photography Session",
+    "shootDate": "2026-02-22",
+    "location": "City Botanic Gardens, Melbourne"
+  },
+  "client": {
+    "name": "Northside Wellness Clinic",
+    "email": "accounts@northsidewellness.example",
+    "phone": "+61 400 000 002",
+    "address": "Carlton VIC"
+  },
+  "lineItems": [
+    {
+      "description": "Portrait shoot (2 hours)",
+      "quantity": 1,
+      "unitPrice": 650,
+      "taxable": false
+    },
+    {
+      "description": "Edited high-res gallery delivery",
+      "quantity": 1,
+      "unitPrice": 250,
+      "taxable": false
+    }
+  ],
+  "notes": "Thank you for the session. Delivery link provided within 5 business days."
+}

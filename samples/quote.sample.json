@@ -1,0 +1,28 @@
+{
+  "documentType": "quote",
+  "issueDate": "2026-02-25",
+  "dueDate": "2026-03-18",
+  "validUntil": "2026-03-18",
+  "gstEnabled": false,
+  "client": {
+    "name": "Oceanview Events",
+    "email": "accounts@oceanviewevents.example",
+    "phone": "+61 400 000 001",
+    "address": "Southbank VIC"
+  },
+  "lineItems": [
+    {
+      "description": "Event photography coverage (8 hours)",
+      "quantity": 1,
+      "unitPrice": 3200,
+      "taxable": false
+    },
+    {
+      "description": "Online gallery + high-resolution download",
+      "quantity": 1,
+      "unitPrice": 450,
+      "taxable": false
+    }
+  ],
+  "notes": "Quote includes planning call and delivery support. Regional travel is additional."
+}

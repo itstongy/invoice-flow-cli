@@ -1,0 +1,17 @@
+node_modules/
+dist/
+output/
+.state/
+.DS_Store
+*.log
+
+# Private/local business data
+profiles/business.profile.json
+profiles/client.presets.json
+
+# Local branding assets (keep personal logos out of git)
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
+assets/*.webp
+assets/*.svg

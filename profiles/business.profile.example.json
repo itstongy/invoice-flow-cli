@@ -1,0 +1,22 @@
+{
+  "businessName": "Coastal Lens Studio",
+  "legalName": "Coastal Lens Studio Pty Ltd",
+  "abn": "12345678901",
+  "email": "hello@example.com",
+  "phone": "+61 400 000 000",
+  "website": "https://example.com",
+  "address": "Melbourne VIC, Australia",
+  "logoPath": "${INVOICE_LOGO_PATH}",
+  "currency": "AUD",
+  "defaultTermsDays": 7,
+  "payment": {
+    "bankName": "Commonwealth Bank",
+    "accountName": "Coastal Lens Studio Pty Ltd",
+    "bsb": "064-471",
+    "accountNumber": "10120960",
+    "payId": "payments@example.com",
+    "paymentReferenceLabel": "Invoice number"
+  },
+  "notesFooter": "Please pay by the due date. Usage rights remain with the photographer until payment is received.",
+  "sequenceStatePath": ".state/invoice-sequence.json"
+}
